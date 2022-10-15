@@ -24,7 +24,7 @@ public class Lib {
 
     @ManyToOne
     @JoinColumn(name = "idCategory")
-    @JsonIgnoreProperties("boxes")
+    @JsonIgnoreProperties("libs")
     private Category category;
 
     @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "lib")
