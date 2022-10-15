@@ -85,7 +85,7 @@ public class ReservationService {
             e.printStackTrace();
         }
         if(a.before(b)){
-            return reservationRepository.findAllByDate(a, b);
+            return reservationRepository.findAllByStartDateAfterAndStartDateBefore(a, b);
         }else {
             return new ArrayList<>();
         }
